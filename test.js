@@ -23,7 +23,6 @@ function generateGameCase() {
   let deathWeapon =
     death[deathCause][randomVariant(Object.keys(death[deathCause]).length)];
   let caseResult = `${characterResult} ${reasonResult} ${placeResult} ${deathCause} ${deathWeapon}`;
-  const span = document.getElementById("result");
-  span.textContent = caseResult;
-  return caseResult;
+  const resultField = document.getElementById("result");
+  resultField.textContent = caseResult;
 }
